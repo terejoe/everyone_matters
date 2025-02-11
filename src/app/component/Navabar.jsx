@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-// import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,14 +14,15 @@ export default function Navbar() {
     <>
       <div className="flex justify-between lg:px-40 px-6 py-3 bg-[#FAFAFA]">
         {/* <Link href="/"><Image src={devendLogo} alt='Logo of Devend'/></Link> */}
-        <div className="hidden md:flex space-x-10 text-sm font-normal py-4">
-          <Link href="/about" className={`${pathname === "/about" ? "underline underline-offset-8 decoration-[#EDCC19]" : "no-underline"} text-[#111111]`}>About Us</Link>
-          <Link href="/whatwedo" className={`${pathname === "/whatwedo" ? "underline underline-offset-8 decoration-[#EDCC19]" : "no-underline"} text-[#111111]`}>What We Do</Link>
-          <Link href="/getinvolved" className={`${pathname === "/getinvolved" ? "underline underline-offset-8 decoration-[#EDCC19]" : "no-underline"} text-[#111111]`}>Get Involved</Link>
+        <div className="hidden md:flex space-x-10 text-sm font-normal py-4 text-[#111111]">
+          <Link href="/" className={`${pathname === "/" ? "underline underline-offset-8 decoration-[#2E2878]" : "no-underline"}`}>Home</Link>
+          <Link href="/about" className={`${pathname === "/about" ? "underline underline-offset-8 decoration-[#2E2878]" : "no-underline"}`}>About Us</Link>
+          <Link href="/whatwedo" className={`${pathname === "/whatwedo" ? "underline underline-offset-8 decoration-[#2E2878]" : "no-underline"}`}>What We Do</Link>
+          <Link href="/getinvolved" className={`${pathname === "/getinvolved" ? "underline underline-offset-8 decoration-[#2E2878]" : "no-underline"}`}>Get Involved</Link>
         </div>
 
         <div className="">
-            <button className='px-8 py-3 text-white bg-[#2E2878] text-sm rounded-md'>
+            <button className='px-8 py-3 text-white bg-[#2E2878] text-sm'>
               Join Our Community
             </button>
         </div>
@@ -37,7 +37,7 @@ export default function Navbar() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="white"
+                fill="#111111"
                 width={40}
                 height={40}
               >
@@ -64,6 +64,9 @@ export default function Navbar() {
                 : "absolute top-0 left-0 w-full h-screen bg-[#2E2878] flex flex-col justify-center items-center text-white z-10"
             }
           >
+            <li className="py-4 text-2xl">
+              <Link href="/" onClick={handleClick}>Home</Link>
+            </li>
 
             <li className="py-4 text-2xl">
               <Link href="/about" onClick={handleClick}>About Us</Link>

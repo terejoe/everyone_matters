@@ -5,7 +5,7 @@ import InvolvedImgThree from '../../../../public/involved_c.png';
 
 const Involved = () => {
   return (
-    <div className="bg-white md:px-32 md:py-20 p-10 text-[#111111]">
+    <div className="bg-white md:px-32 md:py-20 p-6 text-[#111111]">
         <div className="mb-8">
             <hr className="border-[#80BB66] mb-3 border-t w-[100px]" />
             <h1 className="text-2xl font-bold mt-4"> Get Involved </h1>
@@ -13,7 +13,7 @@ const Involved = () => {
         </div>
 
         <div className='my-4'>
-            <div className='grid md:grid-cols-3 md:gap-2 gap-40'>
+            <div className='grid md:grid-cols-3 md:gap-2 gap-8'>
                 <div className="relative w-full"> 
                     <Image src={InvolvedImgOne} alt='An image of hands held together'/>  
                     <div className="absolute flex bottom-2 right-0 left-0 justify-center items-center">  

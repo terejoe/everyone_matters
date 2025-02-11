@@ -5,7 +5,7 @@ import ReportImgThree from "../../../../public/report_img_three.png";
 
 const Reports = () => {
   return (
-    <div className="bg-white lg:px-32 lg:py-20 p-10 text-[#111111]">
+    <div className="bg-white lg:px-32 lg:py-20 p-6 text-[#111111]">
       <div className="mb-8">
         <hr className="border-[#80BB66] mb-3 border-t w-[100px]" />
         <h1 className="text-2xl font-bold mt-4"> Recent Reports </h1>

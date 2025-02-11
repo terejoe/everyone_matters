@@ -9,7 +9,7 @@ import IconSix from '../../../../public/icon_f.svg'
 const Focus = () => {
   return (
     <div className='flex justify-center'>
-        <div className="bg-[#FAFAFA] md:px-32 md:py-20 p-10 text-[#111111]">
+        <div className="bg-[#FAFAFA] md:px-32 md:py-20 p-6 text-[#111111]">
             <div className="mb-8">
                 <hr className="border-[#80BB66] mb-3 border-t w-[100px]" />
                 <h1 className="text-2xl font-bold mt-4"> Our Core Focuses </h1>

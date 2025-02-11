@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-black md:px-40 md:py-10 p-10 text-white">
+    <div className="bg-[#111111] md:px-40 md:py-10 p-10 text-white">
       <div className="grid md:grid-cols-2 gap-4 mb-10">
         <p className="text-3xl font-bold leading-[1.5] tracking-wider max-w-[350px]">
           The Everyone Matters Foundation
         </p>
-        <p className="text-sm font-sans leading-[1.5] tracking-wide max-w-[480px]">
+        <p className="text-sm font-serif font-thin leading-[1.5] tracking-wide max-w-[480px]">
           We are a non-profit organization dedicated to creating a more just and
           equitable world for all. We strive to empower communities by fostering
           sustainable development, promoting economic growth, and ensuring equal
@@ -19,9 +19,10 @@ const Footer = () => {
 
       <div className="md:grid grid-cols-2 gap-4 mb-6">
         <div className="md:space-x-20 space-x-10 flex">
+
           <div className="text-sm">
-            <p className="mb-5 font-semibold">Explore</p>
-            <div className="font-sans text-[#cccccc] space-y-2">
+            <p className="mb-7 font-semibold">Explore</p>
+            <div className="font-serif text-[#cccccc] space-y-2">
               <p>Our Mission</p>
               <p>Our Works</p>
               <p>Careers</p>
@@ -29,8 +30,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-sm">
-            <p className="mb-5 font-semibold">Connect</p>
-            <div className="font-sans text-[#cccccc] space-y-2">
+            <p className="mb-7 font-semibold">Connect</p>
+            <div className="font-serif text-[#cccccc] space-y-2">
               <p>Donate Now</p>
               <p>Partner with Us</p>
             </div>
@@ -40,14 +41,14 @@ const Footer = () => {
           <p className="mt-5 md:mt-0 font-semibold">
             Stay Connected with Us. Sign Up For Email
           </p>
-          <p className="font-sans text-[#cccccc] mb-2 mt-4">Email Address</p>
+          <p className="font-serif text-[#cccccc] mb-2 mt-4">Email Address</p>
           <div className="md:flex gap-3">
             <input
               type="text"
               placeholder="yourname@email.com"
-              className="md:w-4/5 w-full py-3 px-3 placeholder:text-[#414141]"
+              className="md:w-4/5 w-full py-3 px-3 placeholder:text-[#414141] placeholder:text-sm"
             />
-            <button className="bg-[#80BB66] px-6 py-2 text-[#111111] font-sans mt-5 md:mt-0">
+            <button className="bg-[#80BB66] px-6 py-2 text-[#111111] font-serif font-semibold mt-5 md:mt-0">
               Subscribe
             </button>
           </div>
