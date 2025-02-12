@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import IconOne from '../../../../public/icon_a.svg';
+import IconOne from '../../../../public/icon_a.svg'
 import IconTwo from '../../../../public/icon_b.svg'
 import IconThree from '../../../../public/icon_c.svg'
-import IconFour from '../../../../public/icon_d.svg';
+import IconFour from '../../../../public/icon_d.svg'
 import IconFive from '../../../../public/icon_e.svg'
 import IconSix from '../../../../public/icon_f.svg'
 

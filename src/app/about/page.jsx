@@ -13,13 +13,13 @@ const About = () => {
         }}  
         >
             <div className="md:mr-12">
-                <div className='px-6 py-3 text-white bg-[#2E2878] text-sm'>
+                <div className='p-6 text-white bg-[#2E2878] text-sm'>
                     About Us
                 </div>
             </div>
         </div>
 
-        <div className='md:p-20 p-5 mx-auto max-w-[900px]'>
+        <div className='md:p-14 p-5 mx-auto max-w-[900px]'>
             <p className='text-[#111111] text-2xl font-bold'>The Everyone Matters Foundation is a non-profit organization dedicated to creating a world where everyone matters, starting with one community at a time.</p>
         </div>
 
@@ -28,7 +28,7 @@ const About = () => {
             <div className="mt-10">
                 <div>
                     <hr className="border-[#80BB66] mb-3 border-t w-[100px]" />
-                    <h1 className="text-2xl font-bold mt-4 max-w-[400px]">Our Mission</h1>  
+                    <h1 className="text-2xl font-bold mt-4">Our Mission</h1>  
                     <p className='text-sm mt-5 max-w-[450px]'>Together we can save the world and create a positive impact, Starting with one community at a time.</p>
                 </div>
 
@@ -115,9 +115,12 @@ const About = () => {
                     <h1 className="text-2xl font-bold mt-4">Meet Our Team</h1>  
                     <p className='text-sm mt-4 max-w-[500px]'>Meet the dedicated team who embody the spirit of the Everyone Matters Foundation. Our team of staff, leaders, and partners work together to create a world where everyone matters.</p>
                 </div>
-                <button className='px-4 py-3 bg-[#2E2878] text-white mt-8'>
-                    Meet Our People
-                </button>
+                
+                <Link href="/team">
+                    <button className='px-4 py-3 bg-[#2E2878] text-white mt-8'>
+                        Meet Our People
+                    </button>
+                </Link>
             </div>
             <div className="mt-10 md:mt-0">
                 <Image

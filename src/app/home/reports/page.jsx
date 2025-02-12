@@ -17,9 +17,11 @@ const Reports = () => {
             <div className="md:mr-12 my-4 text-center">
                 <h4 className="md:px-10 mb-4 font-bold text-xl">Empowering Children Through Education</h4>
                 <p className="md:px-12 text-sm ">Increased access to quality education for vulnerable children, strengthened community engagement, and improved local governance.</p>
-                <button className='px-6 font-semibold text-sm py-3 border-[#2E2878] border-2 mt-8'>
+                <Link href="/report">
+                  <button className="px-6 font-semibold text-sm py-3 border-[#2E2878] border-2 mt-8">
                     Read Report
-                </button>
+                  </button>
+              </Link>
             </div>
         </div>
         <div className="mt-2">
@@ -27,9 +29,11 @@ const Reports = () => {
             <div className="md:mr-12 my-4 text-center">
                 <h4 className="md:px-10 mb-4 font-bold text-xl">Community-Led Organic Farming</h4>
                 <p className="md:px-12 text-sm ">Increased food security for the community, improved livelihoods for local farmers, and reduced environmental impact.</p>
-                <button className='px-6 font-semibold text-sm py-3 border-[#2E2878] border-2 mt-8'>
+                <Link href="/report">
+                  <button className="px-6 font-semibold text-sm py-3 border-[#2E2878] border-2 mt-8">
                     Read Report
-                </button>
+                  </button>
+              </Link>
             </div>
         </div>
         <div className="mt-2">
@@ -37,9 +41,11 @@ const Reports = () => {
             <div className="md:mr-12 my-4 text-center">
                 <h4 className="md:px-10 mb-4 font-bold text-xl">Immediate Relief To Affected Communities</h4>
                 <p className="md:px-12 text-sm ">In response to a recent flood in Tete, we provided emergency food aid, clean water supplies, and temporary shelter to over 500 families</p>
-                <button className='px-6 font-semibold text-sm py-3 border-[#2E2878] border-2 mt-8'>
+                <Link href="/report">
+                  <button className="px-6 font-semibold text-sm py-3 border-[#2E2878] border-2 mt-8">
                     Read Report
-                </button>
+                  </button>
+              </Link>
             </div>
         </div>
       </div>
