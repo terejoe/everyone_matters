@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-// import { toast } from "sonner";
+import { toast } from "sonner";
 
 const initialValues = {
   firstname: "",
