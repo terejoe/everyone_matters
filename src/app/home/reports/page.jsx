@@ -2,6 +2,7 @@ import Image from "next/image";
 import ReportImgOne from "../../../../public/report_img_one.png";
 import ReportImgTwo from "../../../../public/report_img_two.png";
 import ReportImgThree from "../../../../public/report_img_three.png";
+import Link from "next/link";
 
 const Reports = () => {
   return (
