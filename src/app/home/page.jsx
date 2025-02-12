@@ -1,4 +1,5 @@
 import Creating from "./creating/page";
+import CoreFocus from "./focus/page";
 import Footer from "./footer/page";
 import Hero from "./hero/page";
 import Involved from "./involved/page";
@@ -11,7 +12,7 @@ const Home = () => {
       <Hero/>
       <Creating/>
       <Reports/>
-      <Focus/>
+      <CoreFocus/>
       <Involved/>
       <Footer/>
     </div>
