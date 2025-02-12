@@ -344,12 +344,14 @@ const Whatwedo = () => {
             You can help build a world where everyone matters. Join our network
             of partners and leverage your resources to support our mission.
           </p>
-          <button className="px-4 py-3 bg-[#2E2878] text-white">
-            Partner with Us
-          </button>
+          <Link href="/partner">
+            <button className="px-4 py-3 bg-[#2E2878] text-white">
+              Partner with Us
+            </button>
+          </Link>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

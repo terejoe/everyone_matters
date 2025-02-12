@@ -138,13 +138,12 @@ const Report = () => {
                 themselves and their community.
               </p>
               <p className="text-sm font-serif mt-5">
-                The impact of this project has been truly inspiring. We have
-                witnessed a significant increase in school enrollment rates,
-                improved academic performance among students, and a renewed
-                sense of hope within the community. The children of [Community
-                Name] are now equipped with the knowledge and skills to reach
-                their full potential and contribute to a brighter future for
-                themselves and their community.
+                This project exemplifies the Everyone Matters Foundation's
+                commitment to empowering individuals and creating a world where
+                every child has the opportunity to thrive. We believe that
+                education is not only a fundamental human right but also a
+                powerful tool for social and economic development. By investing
+                in education, we are investing in a brighter future for all.
               </p>
             </div>
           </div>
@@ -230,9 +229,11 @@ const Report = () => {
             You can help build a world where everyone matters. Join our network
             of partners and leverage your resources to support our mission.
           </p>
-          <button className="px-4 py-3 bg-[#2E2878] text-white">
-            Partner with Us
-          </button>
+          <Link href="/partner">
+            <button className="px-4 py-3 bg-[#2E2878] text-white">
+              Partner with Us
+            </button>
+          </Link>
         </div>
       </div>
 
