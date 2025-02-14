@@ -75,7 +75,7 @@ const PartnerForm = () => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
-    console.log(values);
+    // console.log(values);
 
     if (Object.keys(validationErrors).length > 0) return;
 
