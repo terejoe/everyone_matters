@@ -1,22 +1,29 @@
-
 "use client";
 import React from "react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 const initialValues = {
-  firstname: "",
-  lastname: "",
+  brandname: "",
+  fullname: "",
   email: "",
-  phone: "",
+  employee: "",
+  website: "",
+  location: "",
+  affiliate: "",
+  hear: "",
   message: "",
 };
 
 const initialErrors = {
-  firstname: "",
-  lastname: "",
+  brandname: "",
+  fullname: "",
   email: "",
-  phone: "",
+  employee: "",
+  website: "",
+  location: "",
+  affiliate: "",
+  hear: "",
   message: "",
 };
 
@@ -29,13 +36,16 @@ const PartnerForm = () => {
   const validate = () => {
     const newErrors = {};
 
-    if (!values.firstname.trim())
-      newErrors.firstname = "First name is required.";
-    if (!values.lastname.trim()) newErrors.lastname = "Last name is required.";
+    if (!values.brandname.trim()) newErrors.brandname = "Brand name is required.";
+    if (!values.fullname.trim()) newErrors.fullname = "Full name is required.";
     if (!values.email.trim()) newErrors.email = "Email is required.";
     else if (!/\S+@\S+\.\S+/.test(values.email))
       newErrors.email = "Invalid email format.";
-    if (!values.phone.trim()) newErrors.phone = "Phone number is required.";
+    if (!values.employee.trim()) newErrors.employee = "Number of Employees is required.";
+    if (!values.website.trim()) newErrors.website = "Brand website is required.";
+    if (!values.location.trim()) newErrors.location = "Location is required.";
+    if (!values.affiliate.trim()) newErrors.affiliate = "Field is required.";
+    if (!values.hear.trim()) newErrors.hear = "Field is required.";
     if (!values.message.trim()) newErrors.message = "Message cannot be empty.";
 
     return newErrors;
@@ -101,98 +111,188 @@ const PartnerForm = () => {
   return (
     <div className="pt-2">
       <form className="w-full text-left" onSubmit={handleSubmit}>
-        {/* Full Name */}
+        {/* Brand Name */}
         <div className="mb-6">
-          <label className="block font-medium text-[#070707] mb-2">
-            Full Name
-          </label>
-          <div className="flex gap-4">
+          <label className="block text-[#414141] text-sm mb-2">Brand Name</label>
+          <input
+            type="text"
+            name="brandname"
+            placeholder="Company/organizational name"
+            value={values.brandname}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={`w-full px-4 py-2 border rounded ${
+              errors.brandname ? "border-red-500" : "border-[#E5E5E5]"
+            } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+          />
+          {errors.brandname && (
+            <p className="text-red-500 text-xs mt-1">{errors.brandname}</p>
+          )}
+        </div>
+
+        {/* Name and Email Address */}
+        <div className="flex gap-4 mb-6 w-full">
+          <div className="flex-1">
+            <label className="block text-[#414141] text-sm mb-2">Your Name</label>
             <input
               type="text"
-              name="firstname"
-              placeholder="First name"
-              value={values.firstname}
+              name="fullname"
+              placeholder="Full Name"
+              value={values.fullname}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full px-4 py-2 border rounded-md ${
-                errors.firstname ? "border-red-500" : "border-[#E6E7E6]"
-              } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+              className={`w-full px-4 py-2 border rounded ${
+                errors.fullname ? "border-red-500" : "border-[#E5E5E5]"
+              } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400 `}
             />
-            <input
-              type="text"
-              name="lastname"
-              placeholder="Last name"
-              value={values.lastname}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={`w-full px-4 py-2 border rounded-md ${
-                errors.lastname ? "border-red-500" : "border-[#E6E7E6]"
-              } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
-            />
+            {errors.fullname && (
+              <p className="text-red-500 text-xs mt-1">{errors.fullname}</p>
+            )}
           </div>
-          {errors.firstname && (
-            <p className="text-red-500 text-xs mt-1">{errors.firstname}</p>
-          )}
-          {errors.lastname && (
-            <p className="text-red-500 text-xs mt-1">{errors.lastname}</p>
-          )}
+
+          {/* Email */}
+          <div className="flex-1">
+            <label className="block text-[#414141] text-sm mb-2">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@user.com"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`w-full px-4 py-2 border rounded ${
+                errors.email ? "border-red-500" : "border-[#E5E5E5]"
+              } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400`}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+            )}
+          </div>
         </div>
 
-        {/* Email */}
-        <div className="mb-6">
-          <label className="block font-medium text-[#070707] mb-2">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="user@example.com"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={`w-full px-4 py-2 border rounded-md ${
-              errors.email ? "border-red-500" : "border-[#E6E7E6]"
-            } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
-          />
-          {errors.email && (
-            <p className="text-red-500 text-xs mt-1">{errors.email}</p>
-          )}
+        {/* Employees and Website */}
+        <div className="flex gap-4 mb-6 w-full">
+          <div className="flex-1">
+            <label className="block text-[#414141] text-sm mb-2">Number of Employees</label>
+            <input
+              type="number"
+              name="employee"
+              placeholder="Employees"
+              value={values.employee}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`w-full px-4 py-2 border rounded ${
+                errors.employee ? "border-red-500" : "border-[#E5E5E5]"
+              } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+            />
+            {errors.employee && (
+              <p className="text-red-500 text-xs mt-1">{errors.employee}</p>
+            )}
+          </div>
+
+          {/* Website */}
+          <div className="flex-1">
+            <label className="block text-[#414141] text-sm mb-2">
+              Brand Website
+            </label>
+            <input
+              type="text"
+              name="website"
+              placeholder="example@user.com"
+              value={values.website}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`w-full px-4 py-2 border rounded ${
+                errors.website ? "border-red-500" : "border-[#E5E5E5]"
+              } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400`}
+            />
+            {errors.website && (
+              <p className="text-red-500 text-xs mt-1">{errors.website}</p>
+            )}
+          </div>
         </div>
 
-        {/* Phone */}
+        {/* Location */}
         <div className="mb-6">
-          <label className="block font-medium text-[#070707] mb-2">
-            Phone Number
+          <label className="block text-[#414141] text-sm mb-2">
+            Location 
           </label>
           <input
-            type="tel"
-            name="phone"
-            placeholder="Enter your phone number"
-            value={values.phone}
+            type="text"
+            name="location"
+            placeholder="example,state,country"
+            value={values.location}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={`w-full px-4 py-2 border rounded-md ${
-              errors.phone ? "border-red-500" : "border-[#E6E7E6]"
-            } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+            className={`w-full px-4 py-2 border rounded ${
+              errors.location ? "border-red-500" : "border-[#E5E5E5]"
+            } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400`}
           />
-          {errors.phone && (
-            <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+          {errors.location && (
+            <p className="text-red-500 text-xs mt-1">{errors.location}</p>
           )}
         </div>
+
+        {/* Foundation */}
+        <div className="flex gap-4 mb-6 w-full">
+          <div className="flex-1">
+            <label className="block text-[#414141] text-sm mb-2">Are you a foundation affiliated with one?</label>
+            <input
+              type="text"
+              name="affiliate"
+              placeholder="affiliate"
+              value={values.affiliate}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`w-full px-4 py-2 border rounded ${
+                errors.affiliate ? "border-red-500" : "border-[#E5E5E5]"
+              } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+            />
+            {errors.affiliate && (
+              <p className="text-red-500 text-xs mt-1">{errors.affiliate}</p>
+            )}
+          </div>
+
+          {/* Hear About Us */}
+          <div className="flex-1">
+            <label className="block text-[#414141] text-sm mb-2">
+              How did you hear about Everyone Matters Foundation?
+            </label>
+            <input
+              type="text"
+              name="hear"
+              placeholder="LinkedIn,Instagram"
+              value={values.hear}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`w-full px-4 py-2 border rounded ${
+                errors.hear ? "border-red-500" : "border-[#E5E5E5]"
+              } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400`}
+            />
+            {errors.hear && (
+              <p className="text-red-500 text-xs mt-1">{errors.hear}</p>
+            )}
+          </div>
+        </div>
+
 
         {/* Message */}
         <div className="mb-6">
-          <label className="block font-medium text-[#070707] mb-2">
-            How can we help?
+          <label className="block text-sm text-[#414141] mb-2">
+            Anything else you would like to share?
           </label>
           <textarea
             name="message"
-            rows="4"
-            placeholder="Your message here"
+            rows="5"
+            placeholder="Share any additional question or details here."
             value={values.message}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={`w-full px-4 py-2 border rounded-md ${
-              errors.message ? "border-red-500" : "border-[#E6E7E6]"
-            } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+            className={`w-full px-4 py-2 border rounded ${
+              errors.message ? "border-red-500" : "border-[#E5E5E5]"
+            } text-sm placeholder:text-xs placeholder:text-[#C6C6C6] focus:outline-none focus:ring-1 focus:ring-blue-400`}
           />
           {errors.message && (
             <p className="text-red-500 text-xs mt-1">{errors.message}</p>
@@ -207,7 +307,7 @@ const PartnerForm = () => {
             Object.values(errors).some((error) => error) ||
             Object.values(values).some((value) => !value.trim())
           }
-          className={`bg-[#37B34A] mt-8 px-12 py-3 rounded-lg text-white cursor-pointer ${
+          className={`bg-[#2E2878] mt-8 px-4 py-3 text-white cursor-pointer mx-auto block ${
             isLoading ||
             Object.values(errors).some((error) => error) ||
             Object.values(values).some((value) => !value.trim())
@@ -215,7 +315,7 @@ const PartnerForm = () => {
               : ""
           }`}
         >
-          {isLoading ? "Sending..." : "Send Message"}
+          {isLoading ? "Sending..." : "Partner with Us"}
         </button>
       </form>
     </div>

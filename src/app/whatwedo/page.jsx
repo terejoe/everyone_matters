@@ -336,7 +336,7 @@ const Whatwedo = () => {
       </div>
       
       {/* Partner With Us */}
-      <div className="bg-white md:p-20 p-6 text-[#111111] md:flex justify-center gap-8">
+      <div className="bg-white md:p-20 p-6 text-[#111111] flex justify-center gap-8">
         <div className="text-center flex flex-col items-center">
           <hr className="border-[#80BB66] mb-4 border-t w-[100px]" />
           <h1 className="text-2xl font-bold mb-4">Partner With Us Today</h1>

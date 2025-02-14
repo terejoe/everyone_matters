@@ -12,7 +12,7 @@ const CoreFocus = () => {
         <div className="bg-[#FAFAFA] md:px-32 md:py-20 p-6 text-[#111111]">
             <div className="mb-8">
                 <hr className="border-[#80BB66] mb-3 border-t w-[100px]" />
-                <h1 className="text-2xl font-bold mt-4"> Our CoCorere Focuses </h1>
+                <h1 className="text-2xl font-bold mt-4"> Our Core Focuses </h1>
                 <p className='text-sm mt-5 max-w-[470px]'>The Everyone Matters Foundation focuses on creating a positive impact through these key areas:</p>
             </div>
 

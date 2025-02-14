@@ -26,7 +26,7 @@ const GetInvolved = () => {
       </div>
 
       {/* Ways to Get Involved */}
-      <div className="bg-white md:p-20 p-6 text-[#111111] md:flex justify-center">
+      <div className="bg-white md:p-20 p-6 text-[#111111] flex justify-center">
         <div className="text-center flex flex-col items-center">
           <hr className="border-[#80BB66] mb-4 border-t w-[100px]" />
           <h1 className="text-2xl font-bold mb-4">Ways to Get Involved</h1>
