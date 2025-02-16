@@ -11,7 +11,7 @@ export default function Home() {
     <div className="">
       <Hero/>
       <Creating/>
-      {/* <Reports/> */}
+      <Reports/>
       <CoreFocus/>
       <Involved/>
       <Footer/>
